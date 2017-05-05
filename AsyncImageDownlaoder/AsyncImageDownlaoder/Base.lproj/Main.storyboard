@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Yoc-MI-g7H">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="lNM-9I-oaT">
+            <objects>
+                <navigationController id="Yoc-MI-g7H" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ldY-I0-xBO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="8vH-pI-SeY" kind="relationship" relationship="rootViewController" id="oJX-hN-KmF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9oG-Kx-dZw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-713" y="125"/>
+        </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="K1W-DH-LGx">
+            <objects>
+                <viewController id="8vH-pI-SeY" customClass="ProfileViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cRV-mK-nIp"/>
+                        <viewControllerLayoutGuide type="bottom" id="Rms-yC-BgP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qFd-vz-rfF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fLP-LB-EkN">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Rms-yC-BgP" firstAttribute="top" secondItem="fLP-LB-EkN" secondAttribute="bottom" id="9DI-k8-uO6"/>
+                            <constraint firstItem="fLP-LB-EkN" firstAttribute="top" secondItem="cRV-mK-nIp" secondAttribute="bottom" id="NWk-68-jDD"/>
+                            <constraint firstAttribute="trailing" secondItem="fLP-LB-EkN" secondAttribute="trailing" id="ZtZ-ym-lrD"/>
+                            <constraint firstItem="fLP-LB-EkN" firstAttribute="leading" secondItem="qFd-vz-rfF" secondAttribute="leading" id="ov8-WK-pkg"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="vfI-yr-hH7"/>
+                    <connections>
+                        <outlet property="ProfileTableView" destination="fLP-LB-EkN" id="kmQ-eK-P9d"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sio-UW-LXt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="28" y="123.68815592203899"/>
+        </scene>
+        <!--Profile Detail View Controller-->
+        <scene sceneID="COJ-dz-TNW">
+            <objects>
+                <viewController storyboardIdentifier="profileDetailView" id="gfD-gX-cmj" customClass="ProfileDetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Qvl-Qh-HLl"/>
+                        <viewControllerLayoutGuide type="bottom" id="j9P-y5-gzB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jYR-33-MgU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cRk-BD-HxR">
+                                <rect key="frame" x="16" y="72" width="343" height="587"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="cRk-BD-HxR" secondAttribute="trailing" constant="16" id="CvF-XE-3BH"/>
+                            <constraint firstItem="cRk-BD-HxR" firstAttribute="leading" secondItem="jYR-33-MgU" secondAttribute="leading" constant="16" id="Uly-w3-wfJ"/>
+                            <constraint firstItem="j9P-y5-gzB" firstAttribute="top" secondItem="cRk-BD-HxR" secondAttribute="bottom" constant="8" id="gG6-ot-wk3"/>
+                            <constraint firstItem="cRk-BD-HxR" firstAttribute="top" secondItem="Qvl-Qh-HLl" secondAttribute="bottom" constant="8" id="k22-EY-n2g"/>
+                        </constraints>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="profileDetailImage" destination="cRk-BD-HxR" id="CJZ-Hd-xbn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5kD-XG-4QR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="765.60000000000002" y="123.68815592203899"/>
+        </scene>
+    </scenes>
+</document>
